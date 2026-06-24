@@ -1,42 +1,32 @@
-# Exercícios Group By
+# GROUP BY
 
-# Exercício 01 - Total gasto por cliente
+## Exercício 01 - Total gasto por cliente
 
-## Objetivo
+### Objetivo
+Identificar quanto cada cliente gastou na locadora.
 
-Identificar quanto cada cliente gastou na locadora utilizando o banco de dados Sakila.
+### Conceitos
+- JOIN
+- GROUP BY
+- SUM
+- ORDER BY
 
-## Conceitos praticados
+### Arquivo
+`ex01-total-gasto-por-cliente.sql`
 
-* JOIN
-* GROUP BY
-* SUM
-* ORDER BY
-* Alias (AS)
+---
 
-## Query
+## Exercício 02 - Clientes Premium
 
-```sql
-USE sakila;
+### Objetivo
+Encontrar clientes que gastaram pelo menos 150 e realizaram pelo menos 35 compras.
 
-SELECT
-    cus.customer_id AS ID,
-    cus.first_name AS Nome,
-    cus.last_name AS Sobrenome,
-    SUM(amount) AS Total
-FROM payment pay
-JOIN customer cus USING(customer_id)
-GROUP BY customer_id
-ORDER BY Total DESC;
-```
+### Conceitos
+- JOIN
+- GROUP BY
+- SUM
+- COUNT
+- HAVING
 
-## O que aprendi
-
-* Como relacionar tabelas através de JOIN.
-* Como agrupar registros utilizando GROUP BY.
-* Como somar valores utilizando SUM().
-* Como ordenar resultados utilizando ORDER BY.
-
-## Aplicação em QA
-
-Esta consulta pode ser utilizada para validar rankings financeiros exibidos em dashboards, relatórios ou APIs.
+### Arquivo
+`ex02-clientes-premium.sql`
