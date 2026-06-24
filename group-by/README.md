@@ -12,7 +12,7 @@ Identificar quanto cada cliente gastou na locadora.
 - ORDER BY
 
 ### Arquivo
-`ex01-total-gasto-por-cliente.sql`
+`customer_total_spent.sql`
 
 ---
 
